@@ -11,7 +11,7 @@ import java.util.List;
 
 // Como se usa category, se tiene que especificar el CategoryMapper (uses)
 @Mapper(componentModel = "spring", uses = {CategoryMapper.class})
-public interface ProducMapper {
+public interface ProductMapper {
 
     @Mappings({
             @Mapping(source = "idProducto", target = "productId"),

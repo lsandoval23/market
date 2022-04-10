@@ -5,7 +5,7 @@ public class Product {
     // Aca se mapearan los atributos necesarios para el API de la entidad Producto
     // No es necesario mapear todas las columnas para no mostrar toda las estructura de la bd
 
-    private int producId;
+    private int productId;
     private String name;
     private int categoryId;
     private double price;
@@ -15,12 +15,12 @@ public class Product {
 
     /** Getters and setter */
 
-    public int getProducId() {
-        return producId;
+    public int getProductId() {
+        return productId;
     }
 
-    public void setProducId(int producId) {
-        this.producId = producId;
+    public void setProductId(int productId) {
+        this.productId = productId;
     }
 
     public String getName() {

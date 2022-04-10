@@ -4,7 +4,7 @@ import com.ryg.market.domain.Product;
 import com.ryg.market.domain.repository.ProductRepository;
 import com.ryg.market.persistence.crud.ProductoCrudRepository;
 import com.ryg.market.persistence.entity.Producto;
-import com.ryg.market.persistence.mapper.ProducMapper;
+import com.ryg.market.persistence.mapper.ProductMapper;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -22,7 +22,7 @@ public class ProductoRepository implements ProductRepository {
 
     /** Atributos */
     private ProductoCrudRepository productoCrudRepository;
-    private ProducMapper mapper;
+    private ProductMapper mapper;
 
     // Mapear el producto a product usando el mapper nos permite que el repository no sea tan dependiente
     // a una estructura de base de datos en especifico y da seguridad de acceso para no mostrar
