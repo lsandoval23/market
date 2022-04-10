@@ -5,6 +5,7 @@ import com.ryg.market.domain.repository.ProductRepository;
 import com.ryg.market.persistence.crud.ProductoCrudRepository;
 import com.ryg.market.persistence.entity.Producto;
 import com.ryg.market.persistence.mapper.ProductMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -21,7 +22,18 @@ import java.util.Optional;
 public class ProductoRepository implements ProductRepository {
 
     /** Atributos */
+
+    /* Estas instancias no se inicializan a menos que se use la anotacion @Autowired,
+    *  esta anotacion le deja el trabajo de inyectar las dependencias a Spring. Es decir, no va
+    *  a ser necesario inicializar el objeto usando la sentencia New
+    *  Es necesario que las dependencias que se inyectan tienen que ser componentes de Spring
+    *
+    * */
+
+    @Autowired
     private ProductoCrudRepository productoCrudRepository;
+
+    @Autowired
     private ProductMapper mapper;
 
     // Mapear el producto a product usando el mapper nos permite que el repository no sea tan dependiente

@@ -7,8 +7,8 @@ import java.util.Optional;
 
 public interface ProductRepository {
 
-    // En esta clase se va a indicar el nombre de los metodos que cualquier repositorio que trabaje con metodos
-    // tenga que implementar
+    // La implementacion de los metodos se encuentra en ProductoRepository, mediante el mapper
+    // Se mapea a producto.
 
     List<Product> getAll();
     Optional<List<Product>> getByCategory(int categoryId);
